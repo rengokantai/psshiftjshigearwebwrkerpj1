@@ -8,6 +8,9 @@
 	<script>
 		let worker=new Worker('worker.js');
 		worker.postMessage('ke');
+		worker.addEventListener('message',(e)=>{
+			console.log(e.data);
+		})
 	</script>
 </body>
 </html>
